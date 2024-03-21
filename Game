@@ -2,19 +2,28 @@ class Game:
     def __init__(self, board: Board, players: list):
         self.board = board
         self.players
-        self.current_player = players[0]
+        self.current_player = self.players[0]
 
     # Initialize the game by creating the board
     def start_game():
         board.display_board()
-
-    def switch_player()
+        
+    def switch_player():
+        if self.current_player == self.players[0]:
+            self.current_player = self.players[1]
+        elif self.current player == self.player[1]:
+            self.current_player = self.player[0]
 
     # Start the game loop
     def play_game():
-        while (check_game_over() == False):
+        while (True):
+            self.current_player.choose_move()
+            if(is_game_over() or is_board_full):
+                break
+            self.board.display_board()
+            switch_player()
 
-    def check_game_over() -> bool:
+    def is_game_over() -> bool:
         board.check_winner()
         #do something about is_board_full()
         board.is_board_full()
