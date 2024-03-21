@@ -6,7 +6,7 @@ class Game:
 
     # Initialize the game
     def start_game():
-
+        
 
     def switch_player()
 

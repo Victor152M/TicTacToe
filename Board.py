@@ -3,12 +3,19 @@ import pygame
 
 class Board:
 
-    # How many rows and columns will be
-    ROWS = 3
-    COLUMNS = 3
 
-    def __init__(self):
-        pass
+    def __init__(self, width: int, height: int,rows: int, columns: int
+                 , board_color: tuple, line_color: tuple):
+        self.width = width
+        self.height = height
+
+
+    def display_board(self):
+        pygame.init()
+
+
+
+
 
 
     
