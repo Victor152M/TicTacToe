@@ -8,4 +8,3 @@ if __name__ == "__main__":
     game = Game(board, player, players)
     game.start_game()
     game.play_game()
-
