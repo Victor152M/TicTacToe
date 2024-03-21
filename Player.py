@@ -4,4 +4,4 @@ class Player():
         self.marker = marker
     
     def choose_move():
-        print("Your turn")
+        print(f"{self.name}'s turn")

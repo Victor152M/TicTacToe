@@ -1,8 +1,8 @@
 class Game:
-    def __init__(self, board: Board, players: list, current_player: Player):
+    def __init__(self, board: Board, players: list):
         self.board = board
         self.players
-        self.current_player = current_player
+        self.current_player = players[0]
 
     # Initialize the game by creating the board
     def start_game():
@@ -14,6 +14,8 @@ class Game:
     def play_game():
         while (check_game_over() == False):
 
-
-    def check_game_over() -> bool
+    def check_game_over() -> bool:
+        board.check_winner()
+        #do something about is_board_full()
+        board.is_board_full()
 
