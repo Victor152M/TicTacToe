@@ -1,0 +1,31 @@
+    Board Class:
+        Attributes:
+            3x3 grid to represent the game board.
+        Methods:
+            display_board(): Display the current state of the board.
+            check_winner(): Check if there's a winner on the board.
+            is_board_full(): Check if the board is full (indicating a draw).
+
+    Player Class:
+        Attributes:
+            Name of the player (e.g., "Player 1" or "Player 2").
+            Marker (either 'X' or 'O').
+        Methods:
+            choose_move(): Prompt the player to choose a move (row and column).
+
+    Game Class:
+        Attributes:
+            Instances of the Board class.
+            Instances of two Player classes.
+            Current player (either Player 1 or Player 2).
+        Methods:
+            start_game(): Initialize the game by creating the board and players.
+            switch_player(): Switch the current player after each move.
+            play_game(): Main method to control the flow of the game.
+            check_game_over(): Check if the game is over (either a win or a draw).
+
+    Main Program:
+        Create an instance of the Game class.
+        Call the start_game() method to initialize the game.
+        Call the play_game() method to start the game loop.
+        Prompt players for new games or exit after each game ends.
