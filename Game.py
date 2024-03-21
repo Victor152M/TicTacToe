@@ -8,17 +8,17 @@ class Game:
         self.current_player = self.players[0]
 
     # Initialize the game by creating the board
-    def start_game():
-        board.display_board()
+    def start_game(self):
+        self.board.display_board()
         
-    def switch_player():
+    def switch_player(self):
         if self.current_player == self.players[0]:
             self.current_player = self.players[1]
         elif self.current_player == self.player[1]:
             self.current_player = self.player[0]
 
     # Start the game loop
-    def play_game():
+    def play_game(self):
         while (True):
             self.current_player.choose_move()
             if(is_game_over() or is_board_full):
@@ -26,8 +26,8 @@ class Game:
             self.board.display_board()
             switch_player()
 
-    def is_game_over() -> bool:
-        board.check_winner()
+    def is_game_over(self) -> bool:
+        self.board.check_winner()
         #do something about is_board_full()
-        board.is_board_full()
+        self.board.is_board_full()
 
