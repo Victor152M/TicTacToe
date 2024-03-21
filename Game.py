@@ -1,3 +1,6 @@
+from Board import Board
+from Player import Player
+
 class Game:
     def __init__(self, board: Board, players: list):
         self.board = board
@@ -11,7 +14,7 @@ class Game:
     def switch_player():
         if self.current_player == self.players[0]:
             self.current_player = self.players[1]
-        elif self.current player == self.player[1]:
+        elif self.current_player == self.player[1]:
             self.current_player = self.player[0]
 
     # Start the game loop

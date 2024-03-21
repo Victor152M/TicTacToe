@@ -1,3 +1,7 @@
+from Game import Game
+from Board import Board
+from Player import Player
+
 if __name__ == "__main__":
     board = Board()
 
@@ -5,6 +9,6 @@ if __name__ == "__main__":
     player2 = Player("Player 2", "0")
     players = [player1, player2]
 
-    game = Game(board, player, players)
+    game = Game(board, players)
     game.start_game()
     game.play_game()
