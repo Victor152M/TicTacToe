@@ -1,0 +1,1 @@
+self.board.display_board()

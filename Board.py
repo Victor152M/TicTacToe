@@ -23,7 +23,27 @@ class Board:
 
         
     def display_board(self):
-        pass
+
+        # Background color
+        self.screen.fill(self.board_color)
+
+        # Drawing the horizontal lines
+        pygame.draw.line(self.screen, self.line_color, (0, self.height / 3),
+                        (self.width, self.height / 3), width = 1)
+        
+        pygame.draw.line(self.screen, self.line_color, (0, 2 * self.height / 3),
+                        (self.width, 2 * self.height / 3), width = 1)
+            
+
+        # Drawing the vertical lines
+        pygame.draw.line(self.screen, self.line_color, (self.width / 3, 0),
+                        (self.width / 3, self.height), width = 1)
+        
+        pygame.draw.line(self.screen, self.line_color, (2 * self.width / 3, 0),
+                        (2 * self.width / 3, self.height), width = 1)
+
+
+        pygame.display.update()
 
 
     def check_winner(sedlf):
