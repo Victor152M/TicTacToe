@@ -54,7 +54,14 @@ class Board:
 
     def check_winner(self) -> str:
         winner = None
-        #for row in self.map:   
+        number_of_matching_elements_row = 0
+        
+        for i in range(self.rows):
+            row_first_element = self.map[i][0]
+            number_of_matching_elements_row = 0
+            for j in range(self.columns):
+                if (self.map[i][j] == row_first_element):
+                    
         return winner
 
 
