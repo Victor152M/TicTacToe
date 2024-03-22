@@ -46,7 +46,7 @@ class Board:
         pygame.display.update()
 
 
-    def check_winner(sedlf):
+    def check_winner(self):
         pass
 
 

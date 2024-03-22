@@ -22,6 +22,7 @@ class Game:
     def play_game(self):
         while (True):
             self.current_player.choose_move()
+            
             if(self.is_game_over() or self.board.is_board_full()):
                 break
             # questionabel sleep()
