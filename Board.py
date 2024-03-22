@@ -53,3 +53,9 @@ class Board:
     def is_board_full(self):
         pass
    
+
+    def draw_X(self):
+        pass
+
+    def draw_0(self):
+        pass
