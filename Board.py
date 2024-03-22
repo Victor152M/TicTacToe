@@ -46,10 +46,16 @@ class Board:
         pygame.display.update()
 
 
-    def check_winner(sedlf):
+    def check_winner(self):
         pass
 
 
     def is_board_full(self):
         pass
    
+
+    def draw_X(self):
+        pass
+
+    def draw_0(self):
+        pass
