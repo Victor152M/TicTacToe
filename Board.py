@@ -18,6 +18,12 @@ class Board:
         self.height = 600
         self.screen = pygame.display.set_mode((self.width, self.height))
 
+        self.map = [
+            ["","",""],
+            ["","",""],
+            ["","",""]
+        ]
+
         # Window title
         pygame.display.set_caption("TicTacToe Game")
 
@@ -51,11 +57,20 @@ class Board:
 
 
     def is_board_full(self):
-        pass
+    
+        full = True
+        for row in self.map:
+            if full == False:
+                break
+            for column in row:
+                if column == "":
+                    full = False
+                    break
    
 
     def draw_X(self):
         pass
+
 
     def draw_0(self):
         pass

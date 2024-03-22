@@ -5,6 +5,8 @@
             display_board(): Display the current state of the board.
             check_winner(): Check if there's a winner on the board.
             is_board_full(): Check if the board is full (indicating a draw).
+            draw_X(): Draw an X by intersecting 2 lines
+            draw_0(): Draw a circle representing the zero
 
     Player Class:
         Attributes:
