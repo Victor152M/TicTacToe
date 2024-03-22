@@ -67,6 +67,8 @@ class Board:
 
     def is_board_full(self):
     
+    # Checking if there's any unoccupied space on the map in order to 
+    # see if it's full or not
         full = True
         for row in self.map:
             if full == False:
@@ -78,7 +80,10 @@ class Board:
    
 
     def draw_X(self):
-        pass
+        
+        
+        # Drawing an x shape
+        pygame.draw.line(self.screen, self.line_color, )
 
 
     def draw_0(self):
