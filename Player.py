@@ -7,5 +7,11 @@ class Player():
     
     def capture_move(self):
         print(f"{self.name}'s turn")
-        # Input from the keyboar for the move to make
-        Board.draw_X()
+        move = input("Enter a number from 1 to 9: ")
+        [
+            ["","",""],
+            ["","",""],
+            ["","",""]
+        ]
+
+        

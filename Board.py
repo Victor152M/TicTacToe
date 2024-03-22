@@ -52,8 +52,10 @@ class Board:
         pygame.display.update()
 
 
-    def check_winner(self):
-        pass
+    def check_winner(self) -> str:
+        winner = None
+        #for row in self.map:   
+        return winner
 
 
     def is_board_full(self):
