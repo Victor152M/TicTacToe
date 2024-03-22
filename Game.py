@@ -23,7 +23,7 @@ class Game:
         while (True):
             self.current_player.choose_move()
             
-            if(self.is_game_over() or self.board.is_board_full()):
+            if(self.is_game_over()):
                 break
             # questionabel sleep()
             time.sleep(1)
@@ -31,7 +31,10 @@ class Game:
             self.switch_player()
 
     def is_game_over(self) -> bool:
-        self.board.check_winner()
-        #do something about is_board_full()
-        self.board.is_board_full()
+        output = False
+        if (self.board.check_winner() != None):
+            output = True
+        elif (self.board.is_board_full()):
+            output = True
+        return output; 
 
