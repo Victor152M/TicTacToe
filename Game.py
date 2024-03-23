@@ -1,6 +1,7 @@
 from Board import Board
 from Player import Player
 import time
+import pygame
 
 class Game:
     def __init__(self, board: Board, players: list):
@@ -18,11 +19,27 @@ class Game:
         elif self.current_player == self.players[1]:
             self.current_player = self.players[0]
 
+    def make_move(self, key):
+        possible_keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        
+        if key == "1" and self.board.map:
+            pass
+
+
     # Start the game loop
     def play_game(self):
         while (True):
-            self.current_player.capture_move()
+            chosen_key = self.current_player.capture_move()
             
+            for event in pygame.event.get():
+
+                # Exit the game
+                if event.type == pygame.QUIT:
+                    break
+
+            self.make_move(chosen_key)
+
+
             if(self.is_game_over()):
                 break
             # questionable sleep()

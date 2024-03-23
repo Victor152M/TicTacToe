@@ -1,1 +1,1 @@
-self.board.display_board()
+player1

@@ -23,6 +23,7 @@
         Methods:
             start_game(): Initialize the game by creating the board and players.
             switch_player(): Switch the current player after each move.
+            make_move(): Makes a move
             play_game(): Main method to control the flow of the game.
             is_game_over(): Check if the game is over (either a win or a draw).
 
