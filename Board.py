@@ -79,14 +79,18 @@ class Board:
                     break
    
 
-    def draw_X(self):
+    def draw_X(self) -> None:
+        
+        # Drawing an x shape
+        pygame.draw.line(self.screen, self.line_color, (center_x - 45, center_y - 45), 
+                        (center_x + 45, center_y + 45), width=1)
+        
+        pygame.draw.line(self.screen, self.line_color, (center_x - 45, center_y + 45), 
+                        (center_x + 45, center_y - 45))
         
 
-        # Drawing an x shape
-        # pygame.draw.line(self.screen, self.line_color, ((self.width / 3) 
-        #                 / 2 - 45, (self.height / 3) / 2 - 45), ((self.width / 3)
-        #                 / 2 + 45, (self.height / 3) / 2 + 45))
-        pass
-
-    def draw_0(self):
-        pass
+    def draw_0(self) -> None:
+        
+        # Drawing an 0-like shape (a circle)
+        pygame.draw.circle(self.screen, self.line_color, (center_x, center_y), radius=90, width=1)
+        
