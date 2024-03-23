@@ -70,9 +70,9 @@ class Board:
             number_of_matching_elements_column = 0
             for j in range(self.columns):
                 if (self.map[i][j] == row_first_element):
-                    number_of_matching_elements_row += 1;
+                    number_of_matching_elements_row += 1
                     if number_of_matching_elements_row == self.rows:
-                        if self.map[i][k] == "X":
+                        if self.map[i][j] == "X":
                             winner = players[0]
                         else:
                             winner = players[1]
