@@ -29,7 +29,10 @@ class Game:
                         }
         
         if key == "1" and possible_keys.get("1") == "":
-            pass
+            if self.current_player.marker == "X":
+                self.board.draw_X(self.board.width/6, self.board.height/6)
+            else:
+                self.board.draw_0(self.board.width/6, self.board.height/6)
 
 
     # Start the game loop
