@@ -49,7 +49,7 @@ class Game:
 
     def is_game_over(self) -> bool:
         output = False
-        if (self.board.check_winner(self.players) != None):
+        if (self.board.check_winner() != None):
             output = True
         elif (self.board.is_board_full()):
             output = True
