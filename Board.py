@@ -52,16 +52,31 @@ class Board:
         pygame.display.update()
 
 
-    def check_winner(self) -> str:
+    def check_winner(self, players = ["Player_1", "Player_2"]) -> str:
+        """
+        Returns None if there is no winner
+        Returns the name of the winning player otherwise
+        
+        Keyword arguments: 
+        players -- list with player names (first entry is for "X", second entry is for "0")
+        """
         winner = None
         number_of_matching_elements_row = 0
         
+        #For now it only verifies the rows
         for i in range(self.rows):
             row_first_element = self.map[i][0]
             number_of_matching_elements_row = 0
+            number_of_matching_elements_column = 0
             for j in range(self.columns):
                 if (self.map[i][j] == row_first_element):
-                    
+                    number_of_matching_elements_row += 1;
+                    if number_of_matching_elements_row == self.rows:
+                        if self.map[i][k] == "X":
+                            winner = players[0]
+                        else:
+                            winner = players[1]
+                
         return winner
 
 
