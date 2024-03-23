@@ -20,9 +20,15 @@ class Game:
             self.current_player = self.players[0]
 
     def make_move(self, key):
-        possible_keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        possible_keys = {
+                        "1": self.board.map[0][0], "2": self.board.map[0][1], 
+                        "3": self.board.map[0][2], "4": self.board.map[1][0], 
+                        "5": self.board.map[1][1], "6": self.board.map[1][2], 
+                        "7": self.board.map[2][0], "8": self.board.map[2][1], 
+                        "9": self.board.map[2][2]
+                        }
         
-        if key == "1" and self.board.map:
+        if key == "1" and possible_keys.get("1") == "":
             pass
 
 
