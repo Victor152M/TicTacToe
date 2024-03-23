@@ -52,37 +52,50 @@ class Board:
         pygame.display.update()
 
 
-    def check_winner(self, players = ["Player_1", "Player_2"]) -> str:
+    def check_winner(self) -> str:
         """
-        Returns None if there is no winner
-        Returns the name of the winning player otherwise
-        
-        Keyword arguments: 
-        players -- list with player names (first entry is for "X", second entry is for "0")
+        Returns "None" if there is no winner. 
+        Returns "X" if player X is winning. 
+        Returns "0" if player 0 is winning.
         """
-        for row in self.map:
-            if row.count(row[0]):
-                pass
 
-        
+        board = self.map
 
+        # check rows
+        for row in board:
+            if row[0] != "" and row.count(row[0]) == len(row):
+                return row[0]
             
+        # check columns
+        for j in range(self.columns):
+            if (board[0][j] != "" and board[0][j] == board[1][j] and
+                board[0][j] == board[2][j]):
+                return board[0][j]
+        
+        # check diagonals
+        if (board[0][0] != "" and board[0][0] == board[1][1] and 
+            board[0][0] == board[2][2]):
+            return board[0][0]
+        if (board[0][2] != "" and board[0][2] != board[1][1] and
+            board[0][2] == board[2][0]):
+            return board[0][2]
                 
-        return winner
+        return None
 
 
-    def is_board_full(self):
-    
+    def is_board_full(self) -> bool:
     # Checking if there's any unoccupied space on the map in order to 
     # see if it's full or not
-        full = True
+        is_full = True
         for row in self.map:
-            if full == False:
+            if is_full == False:
                 break
             for column in row:
                 if column == "":
-                    full = False
+                    is_full = False
                     break
+                
+        return is_full
    
 
     def draw_X(self, center_x, center_y) -> None:
