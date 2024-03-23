@@ -21,7 +21,7 @@ class Game:
     # Start the game loop
     def play_game(self):
         while (True):
-            self.current_player.choose_move()
+            self.current_player.capture_move()
             
             if(self.is_game_over()):
                 break
