@@ -100,7 +100,7 @@ class Board:
 
     def draw_X(self, center_x, center_y) -> None:
         
-        # Drawing an x shape
+        # Drawing an X shape
         pygame.draw.line(self.screen, self.line_color, (center_x - 45, center_y - 45), 
                         (center_x + 45, center_y + 45), width=1)
         

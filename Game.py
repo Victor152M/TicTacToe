@@ -28,11 +28,28 @@ class Game:
                         "9": self.board.map[2][2]
                         }
         
+        # If the input is 1 then an X or 0 will be drawn in the first square
         if key == "1" and possible_keys.get("1") == "":
             if self.current_player.marker == "X":
                 self.board.draw_X(self.board.width/6, self.board.height/6)
             else:
                 self.board.draw_0(self.board.width/6, self.board.height/6)
+
+
+        # If the input is 2 then an X or 0 will be drawn in the second square
+        if key == "1" and possible_keys.get("1") == "":
+            if self.current_player.marker == "X":
+                self.board.draw_X(self.board.width/3, self.board.height/6)
+            else:
+                self.board.draw_0(self.board.width/3, self.board.height/6)
+
+        
+        # If the input is 3 then an X or 0 will be drawn in the third square and so on
+        if key == "1" and possible_keys.get("1") == "":
+            if self.current_player.marker == "X":
+                self.board.draw_X(5*self.board.width/6, self.board.height/6)
+            else:
+                self.board.draw_0(5*self.board.width/6, self.board.height/6)
 
 
     # Start the game loop
