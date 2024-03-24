@@ -105,7 +105,7 @@ class Board:
                         (center_x + 45, center_y + 45), width=1)
         
         pygame.draw.line(self.screen, self.line_color, (center_x - 45, center_y + 45), 
-                        (center_x + 45, center_y - 45))
+                        (center_x + 45, center_y - 45), width=1)
         
 
     def draw_0(self, center_x, center_y) -> None:
