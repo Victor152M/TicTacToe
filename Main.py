@@ -5,9 +5,9 @@ from Player import Player
 if __name__ == "__main__":
     board = Board()
 
-    player1 = Player("Player 1", "X")
-    player2 = Player("Player 2", "0")
-    players = [player1, player2]
+    playerX = Player("Player 1", "X")
+    player0 = Player("Player 2", "0")
+    players = [playerX, player0]
 
     game = Game(board, players)
     game.start_game()
