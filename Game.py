@@ -31,22 +31,16 @@ class Game:
 
         # X or 0 on the first 3 squares (from left to right)
         # 1
-        if key == "1" and possible_keys.get("1") == "":
+        if key == "1" and self.board.map[0][0] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(self.board.width/6, self.board.height/6)
-
-                # Trebuie self.possible_keys aici? :()
-                possible_keys["1"] = "X"
+                self.board.map[0][0] = "X"
+                print("should work")
             else:
-                self.board.draw_0(self.board.width/6, self.board.height/6)
-
-                # Trebuie self.possible_keys aici? :()
-                possible_keys["1"] = "0"
+                self.board.map[0][0] = "0"
 
         # 2
         if key == "2" and possible_keys.get("2") == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(self.board.width/2, self.board.height/6)
                 possible_keys["2"] = "X"
             else:
                 self.board.draw_0(self.board.width/2, self.board.height/6)
