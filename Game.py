@@ -2,6 +2,7 @@ from Board import Board
 from Player import Player
 import time
 import pygame
+import sys
 
 class Game:
     def __init__(self, board: Board, players: list):
@@ -98,10 +99,10 @@ class Game:
 
                 # Exit the game
                 if event.type == pygame.QUIT:
+                    pygame.display.quit()
                     pygame.quit()
-
-            print(event)
-
+                    sys.exit()
+                    
             self.make_move(chosen_key)
 
             time.sleep(1)
