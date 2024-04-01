@@ -104,11 +104,10 @@ class Game:
 
             self.make_move(chosen_key)
 
-
+            time.sleep(1)
             if(self.is_game_over()):
                 break
             # questionable sleep()
-            time.sleep(1)
             self.board.display_board()
             self.switch_player()
 
