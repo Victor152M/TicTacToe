@@ -111,5 +111,6 @@ class Board:
     def draw_0(self, center_x, center_y) -> None:
         
         # Drawing an 0-like shape (a circle)
-        pygame.draw.circle(self.screen, self.line_color, (center_x, center_y), radius=90, width=1)
+        pygame.draw.circle(self.screen, self.line_color, 
+                          (center_x, center_y), radius=90, width=1)
         
