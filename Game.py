@@ -100,6 +100,8 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
 
+            print(event)
+
             self.make_move(chosen_key)
 
 
