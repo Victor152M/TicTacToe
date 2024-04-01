@@ -129,7 +129,7 @@ class Game:
 
                 # Exit the game
                 if event.type == pygame.QUIT:
-                    break
+                    pygame.quit()
 
             self.make_move(chosen_key)
 
