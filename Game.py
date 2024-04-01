@@ -3,6 +3,7 @@ from Player import Player
 import time
 import pygame
 
+
 class Game:
     def __init__(self, board: Board, players: list):
         self.board = board
@@ -91,6 +92,7 @@ class Game:
 
     # Start the game loop
     def play_game(self):
+        run = True
         while (True):
             chosen_key = self.current_player.capture_move()
             
@@ -98,7 +100,7 @@ class Game:
 
                 # Exit the game
                 if event.type == pygame.QUIT:
-                    pygame.quit()
+                    run = False
 
             print(event)
 

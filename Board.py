@@ -4,7 +4,7 @@ import pygame
 class Board:
 
     def __init__(self):
-        
+        pygame.init()
         # Number of rown n columns
         self.rows = 3
         self.columns = 3
@@ -29,7 +29,7 @@ class Board:
 
         
     def display_board(self):
-
+        pygame.init()
         # Background color
         self.screen.fill(self.board_color)
 
@@ -99,9 +99,9 @@ class Board:
 
         # 9
         if self.map[2][2] == "X":
-            self.draw_X(5 *self.width/6, 5 * self.height/6)
+            self.draw_X(5 * self.width/6, 5 * self.height/6)
         elif self.map[2][2] == "0":
-            self.draw_0(5 *self.width/6, 5 * self.height/6)
+            self.draw_0(5 * self.width/6, 5 * self.height/6)
 
         pygame.display.update()
 
@@ -153,7 +153,7 @@ class Board:
    
 
     def draw_X(self, center_x, center_y) -> None:
-        
+        pygame.init()
         # Drawing an X shape
         pygame.draw.line(self.screen, self.line_color, (center_x - 45, center_y - 45), 
                         (center_x + 45, center_y + 45), width=1)
@@ -163,7 +163,7 @@ class Board:
         
 
     def draw_0(self, center_x, center_y) -> None:
-        
+        pygame.init()
         # Drawing an 0-like shape (a circle)
         pygame.draw.circle(self.screen, self.line_color, 
                           (center_x, center_y), radius=90, width=1)
