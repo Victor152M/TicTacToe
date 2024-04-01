@@ -20,98 +20,73 @@ class Game:
             self.current_player = self.players[0]
 
     def make_move(self, key):
-        possible_keys = {
-                        "1": self.board.map[0][0], "2": self.board.map[0][1], 
-                        "3": self.board.map[0][2], "4": self.board.map[1][0], 
-                        "5": self.board.map[1][1], "6": self.board.map[1][2], 
-                        "7": self.board.map[2][0], "8": self.board.map[2][1], 
-                        "9": self.board.map[2][2]
-                        }
-        
-
         # X or 0 on the first 3 squares (from left to right)
         # 1
         if key == "1" and self.board.map[0][0] == "":
             if self.current_player.marker == "X":
                 self.board.map[0][0] = "X"
-                print("should work")
             else:
                 self.board.map[0][0] = "0"
 
         # 2
-        if key == "2" and possible_keys.get("2") == "":
+        if key == "2" and self.board.map[0][1] == "":
             if self.current_player.marker == "X":
-                possible_keys["2"] = "X"
+                self.board.map[0][1] = "X"
             else:
-                self.board.draw_0(self.board.width/2, self.board.height/6)
-                possible_keys["2"] = "0"
+                self.board.map[0][1] = "0"
 
         # 3
-        if key == "3" and possible_keys.get("3") == "":
+        if key == "3" and self.board.map[0][2] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(5 * self.board.width/6, self.board.height/6)
-                possible_keys["3"] = "X"
+                self.board.map[0][2] = "X"
             else:
-                self.board.draw_0(5 * self.board.width/6, self.board.height/6)
-                possible_keys["3"] = "0"
+                self.board.map[0][2] = "0"
 
 
         # X or 0 on the middle squares (from left to right)
         # 4
-        if key == "4" and possible_keys.get("4") == "":
+        if key == "4" and self.board.map[1][0] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(self.board.width/6, self.board.height/2)
-                possible_keys["4"] = "X"
+                self.board.map[1][0] = "X"
             else:
-                self.board.draw_0(self.board.width/6, self.board.height/2)
-                possible_keys["4"] = "0"
+                self.board.map[1][0] = "0"
 
         # 5
-        if key == "5" and possible_keys.get("5") == "":
+        if key == "5" and self.board.map[1][1] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(self.board.width/2, self.board.height/2)
-                possible_keys["5"] = "X"
+                self.board.map[1][1] = "X"
             else:
-                self.board.draw_0(self.board.width/2, self.board.height/2)
-                possible_keys["5"] = "0"
+                self.board.map[1][1] = "0"
 
         # 6
-        if key == "6" and possible_keys.get("6") == "":
+        if key == "6" and self.board.map[1][2] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(5 * self.board.width/6, self.board.height/2)
-                possible_keys["6"] = "X"
+                self.board.map[1][2] = "X"
             else:
-                self.board.draw_0(5 * self.board.width/6, self.board.height/2)
-                possible_keys["6"] = "0"
+                self.board.map[1][2] = "0"
 
 
         # X or 0 on the last 3 squares (from left to right)
         # 7
-        if key == "7" and possible_keys.get("7") == "":
+        if key == "7" and self.board.map[2][0] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(self.board.width/6, 5 * self.board.height/6)
-                possible_keys["7"] = "X"
+                self.board.map[2][0] = "X"
             else:
-                self.board.draw_0(self.board.width/6, 5 * self.board.height/6)
-                possible_keys["7"] = "0"
+                self.board.map[2][0] = "0"
 
         # 8
-        if key == "8" and possible_keys.get("8") == "":
+        if key == "8" and self.board.map[2][1] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(self.board.width/2, 5 * self.board.height/6)
-                possible_keys["8"] = "X"
+                self.board.map[2][1] = "X"
             else:
-                self.board.draw_0(self.board.width/2, 5 * self.board.height/6)
-                possible_keys["8"] = "0"
+                self.board.map[2][1] = "0"
 
         # 9
-        if key == "9" and possible_keys.get("9") == "":
+        if key == "9" and self.board.map[2][2] == "":
             if self.current_player.marker == "X":
-                self.board.draw_X(5 *self.board.width/6, 5 * self.board.height/6)
-                possible_keys["9"] = "X"
+                self.board.map[2][2] = "X"
             else:
-                self.board.draw_0(5 * self.board.width/6, 5 * self.board.height/6)
-                possible_keys["9"] = "0"
+                self.board.map[2][2] = "0"
 
 
     # Start the game loop
