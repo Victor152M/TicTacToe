@@ -51,57 +51,57 @@ class Board:
         # Drawing X or 0 in parallel with the map
         # First square (1)
         if self.board.map[0][0] == "X":
-            self.board.draw_X(self.board.width/6, self.board.height/6)
+            self.draw_X(self.board.width/6, self.board.height/6)
         else:
-            self.board.draw_0(self.board.width/6, self.board.height/6)
+            self.draw_0(self.board.width/6, self.board.height/6)
 
         # Second square (2)
         if self.board.map[0][1] == "X":
-            self.board.draw_X(self.board.width/2, self.board.height/6)
+            self.draw_X(self.board.width/2, self.board.height/6)
         else:
-            self.board.draw_0(self.board.width/2, self.board.height/6)
+            self.draw_0(self.board.width/2, self.board.height/6)
 
         # 3
         if self.board.map[0][2] == "X":
-            self.board.draw_X(5 * self.board.width/6, self.board.height/6)
+            self.draw_X(5 * self.board.width/6, self.board.height/6)
         else:
-            self.board.draw_0(5 * self.board.width/6, self.board.height/6)
+            self.draw_0(5 * self.board.width/6, self.board.height/6)
 
         # 4
         if self.board.map[1][0] == "X":
-            self.board.draw_X(self.board.width/6, self.board.height/2)
+            self.draw_X(self.board.width/6, self.board.height/2)
         else:
-            self.board.draw_0(self.board.width/6, self.board.height/2)
+            self.draw_0(self.board.width/6, self.board.height/2)
 
         # 5
         if self.board.map[1][1] == "X":
-            self.board.draw_X(self.board.width/2, self.board.height/2)
+            self.draw_X(self.board.width/2, self.board.height/2)
         else:
-            self.board.draw_0(self.board.width/2, self.board.height/2)
+            self.draw_0(self.board.width/2, self.board.height/2)
 
         # 6
         if self.board.map[1][2] == "X":
-            self.board.draw_X(5 * self.board.width/6, self.board.height/2)
+            self.draw_X(5 * self.board.width/6, self.board.height/2)
         else:
-            self.board.draw_0(5 * self.board.width/6, self.board.height/2)
+            self.draw_0(5 * self.board.width/6, self.board.height/2)
 
         # 7
         if self.board.map[2][0] == "X":
-            self.board.draw_X(self.board.width/6, 5 * self.board.height/6)
+            self.draw_X(self.board.width/6, 5 * self.board.height/6)
         else:
-            self.board.draw_0(self.board.width/6, 5 * self.board.height/6)
+            self.draw_0(self.board.width/6, 5 * self.board.height/6)
 
         # 8
         if self.board.map[2][1] == "X":
-            self.board.draw_X(self.board.width/2, 5 * self.board.height/6)
+            self.draw_X(self.board.width/2, 5 * self.board.height/6)
         else:
-            self.board.draw_0(self.board.width/2, 5 * self.board.height/6)
+            self.draw_0(self.board.width/2, 5 * self.board.height/6)
 
         # 9
         if self.board.map[2][2] == "X":
-            self.board.draw_X(5 *self.board.width/6, 5 * self.board.height/6)
+            self.draw_X(5 *self.board.width/6, 5 * self.board.height/6)
         else:
-            self.board.draw_0(5 *self.board.width/6, 5 * self.board.height/6)
+            self.draw_0(5 *self.board.width/6, 5 * self.board.height/6)
 
         pygame.display.update()
 
