@@ -86,9 +86,11 @@ class Game:
             if self.current_player.marker == "X":
                 self.board.draw_X(5 * self.board.width/6, self.board.height/2)
                 possible_keys["6"] = "X"
+                print(possible_keys["6"])
             else:
                 self.board.draw_0(5 * self.board.width/6, self.board.height/2)
                 possible_keys["6"] = "0"
+                print(possible_keys["6"])
 
 
         # X or 0 on the last 3 squares (from left to right)
